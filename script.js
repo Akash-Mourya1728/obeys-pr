@@ -30,7 +30,7 @@ t1.to(".line h2",{
 t1.to("#loader",{
     opacity:0,
     duration:0.2,
-    delay:4
+    delay:3
 })
 t1.from("#page1",{
     y:1600,
@@ -42,6 +42,16 @@ t1.from("#page1",{
 t1.to("#loader",{
     display:'none'
 })
+
+t1.from("#nav",{
+    opacity:0
+})
+
+t1.from("#hero1 h1, #hero2 h1, #hero3 h2,#hero4 h1 ",{
+    y:120,
+    stragger:0.3
+})
+
 }
 loadungAnimation();
 
