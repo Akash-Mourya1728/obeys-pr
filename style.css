@@ -139,9 +139,17 @@ body{
     width: 75%;
     margin-left: 25%;
     height: fit-content;
-    overflow: hidden;
-    position: relative;
-    z-index: 999;
+    overflow-y: hidden;
+}
+
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 500;
+    font-family: "silk serif";
+    left: 15%;
+    top: 30%;
 }
 .hero:nth-child(2){
     margin-top: 17vh;
@@ -231,8 +239,18 @@ body{
     margin-left: 28%;
 }
 #page4-content h1{
+    position: relative;
     font-size: 6vw;
     text-transform: uppercase;  
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 500;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
 }
 #page4-content .underline{
     height: 1px;
@@ -284,5 +302,118 @@ body{
 #page5{
     min-height: 100vh;
     width: 100%;
-    padding: 5vw 0;
+    position: relative;
+}
+.elem{
+   
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+    
+}
+.elem h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    display: inline-block;
+    font-weight: 200;
+     /* background: red; */
+    margin-left: 16px;
+    animation-name: anime;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anime{
+    from{
+        transform: translateX(0);
+
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2{
+   
+    white-space: nowrap;
+    overflow-x: hidden; 
+    margin-bottom: -2vw; 
+}
+
+.elem2 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    display: inline-block;
+    font-weight: 200;
+    transform: translateX(calc(-100% - 20px));
+    animation-name: anime;
+    animation-duration: 12s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.elem span{
+    font-style: italic;
+    font-family: "silk serif";
+}
+.elem2 span{
+    font-style: italic;
+    font-family: "silk serif";
+}
+#footer{
+    height: 85vh;
+    width: 100%;
+    /* background-color: red; */
+    position: relative; 
+    padding-left: 28vw;
+    padding-right: 2vw;
+}
+#footer h1{
+    font-size:7vw ;
+    width: 60vw;
+    text-transform: uppercase; 
+    position: relative;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 500;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+}
+.underline{
+    height: 0.1vw;
+    width: 100%;
+    margin: 2vw 0;
+    background-color: #ffffffe8;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 6vw;
+}
+#footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1.5vw;
+}
+#box{
+    width: 20%;
+}
+#footer-div h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+#footer>h5{
+    font-size: 1vw;
+    font-weight: 500;
+    
 }
