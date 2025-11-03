@@ -48,8 +48,10 @@ body{
 .line h2{
     font-size: 5vw;
    opacity: 0;
+   animation-name: loaderAnime;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-delay:0s; 
 
 
 }
@@ -74,7 +76,7 @@ body{
     text-align: right;
 }
 
-@keyframes anime{
+@keyframes loaderAnime {
     0%{
         font-family: "plain Light";
         -webkit-text-stroke: 1px #fff;
