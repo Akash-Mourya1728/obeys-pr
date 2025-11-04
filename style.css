@@ -227,7 +227,49 @@ body{
     position: relative;
     min-height: 100vh;
     width: 100%;
-    background-color: #2d2d2d;
+    padding: 17vh 2vw ;
+}
+#page3 h1{
+    position: relative;
+    font-size: 6vw;
+    text-transform: uppercase;
+    margin-left: 28vw;  
+}
+#page3 h1::before{
+    content: "02";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 500;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+}
+#page3 .underline{
+   margin-left: 28vw;
+}
+#image-div-container{
+    background-color: red;
+    padding: 1vw;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.image-div{
+    height: 33vw;
+    width: 24vw;
+    flex-shrink: 0;
+     overflow: hidden;
+         position: relative;
+    background-color: blue;
+} 
+.image-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
 }
 #page4{
     position: relative;
@@ -418,4 +460,8 @@ body{
     font-size: 1vw;
     font-weight: 500;
     
+}
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
 }
