@@ -47,11 +47,11 @@ body{
 }
 .line h2{
     font-size: 5vw;
-   opacity: 0;
-   animation-name: loaderAnime;
+    opacity: 0;
+    /* animation-name: now; */
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-delay:0s; 
+    
 
 
 }
@@ -76,7 +76,7 @@ body{
     text-align: right;
 }
 
-@keyframes loaderAnime {
+@keyframes now{
     0%{
         font-family: "plain Light";
         -webkit-text-stroke: 1px #fff;
@@ -250,19 +250,19 @@ body{
 #image-div-container{
     background-color: red;
     padding: 1vw;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex-wrap: wrap;
 }
 .image-div{
-    height: 33vw;
-    width: 24vw;
+    margin: 2vw;
+    height: 39vw;
+    width: 27vw;
     flex-shrink: 0;
      overflow: hidden;
-         position: relative;
-    background-color: blue;
+    position: relative;
+    /* background-color: blue; */
 } 
 .image-div img{
     height: 100%;
@@ -270,6 +270,20 @@ body{
     object-fit: cover;
     object-position: center;
 
+}
+.page3-circle1{
+   
+    height: 20vw;
+    width: 20vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.page3-circle1 svg{
+    height: 30%;
+    left: 50%;
 }
 #page4{
     position: relative;
@@ -370,7 +384,7 @@ body{
     animation-iteration-count: infinite;
 }
 
-@keyframes anime{
+@keyframes anime{ 
     from{
         transform: translateX(0);
 
