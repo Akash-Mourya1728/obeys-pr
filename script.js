@@ -33,7 +33,7 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
-locomotiveAnimation();
+
 function loadingAnimation(){
     
 var t1 = gsap.timeline()
@@ -96,16 +96,63 @@ t1.from("#hero1, #hero2",{
 loadingAnimation();
 
 function cursorAnimation(){
-    document.addEventListener("mousemove",function(dets){
-    gsap.to("#crscr",{
-        left:dets.x,
-        top:dets.y
+Shery.mouseFollower({
+  skew:true,
+  ease:"cubic-bezier(0.23, 1, 0.320, 1)",
+  duration:1
+});
+Shery.makeMagnet("#nav-part2 h4");
+
+var videoContainer = document.querySelector("#video-container");
+var video = document.querySelector("#video-container video")
+videoContainer.addEventListener("mouseenter", function(){
+  videoContainer.addEventListener("mousemove",function(dets){
+    gsap.to(".mousefollower",{
+      opacity:0,
     })
+    gsap.to("#video-cursor",{
+      left:dets.x -570,
+      y:dets.y -300,
+    })
+  })
+})
+videoContainer.addEventListener("mouseleave", function(){
+  gsap.to(".mousefollower",{
+    opacity:1
+  })
+  gsap.to("#video-cursor",{
+    left:"70%",
+    top:"-15%"
+  })
 })
 
-Shery.makeMagnet("#nav-part2 h4");
+var flag = 0;
+
+ videoContainer.addEventListener("click",function(){
+  if(flag == 0){
+      video.play()
+  video.style.opacity = 1;
+  document.querySelector("#video-cursor").innerHTML = `<i class="ri-pause-mini-fill"></i>`
+  gsap.to("#video-cursor",{
+    scale:0.5,
+  })
+    flag = 1
+  }else{
+     video.pause()
+  video.style.opacity = 0;
+  document.querySelector("#video-cursor").innerHTML = `<i class="ri-play-mini-fill"></i>`
+  gsap.to("#video-cursor",{
+    scale:1,
+  })
+    flag = 0
+  }
+
+
+ })
+  
+
 }
-cursorAnimation();
+
 function sheryAnimation(){
   Shery.imageEffect(".image-div", {
   style: 5,
@@ -114,4 +161,6 @@ function sheryAnimation(){
   gooey:true,
 });
 }
+locomotiveAnimation();
+cursorAnimation();
 sheryAnimation();

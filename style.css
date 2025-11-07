@@ -13,15 +13,11 @@ body{
     overflow-x: hidden;
 }
 
-#crscr{
-    height: 2vw;
-    width: 2vw;
-    position: fixed;
-    border-radius: 50%;
-    border: 1px solid #ffffffb4;
-    z-index: 999;
+.mousefollower{
+    border:2px solid #fff;
+    background-color: rgb(255, 255, 255);
+    scale:2;
     mix-blend-mode: difference;
-    transform: translate(-50%,-50%);
 }
 #loader{
     height: 100%;
@@ -187,32 +183,37 @@ body{
 
 }
 #video-container{
-    height: 65vh;
+    height: 66vh;
     width: 71vw;
-    left: 28%;
     position: relative;
+    left: 28%;
+    background-color: red;
     background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
-
+    background-size: cover;
+    background-position: center;
 }
-#video-container img{
+/* #video-container img{
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover; 
     top:0;
-}
+}*/
 #video-container video{
     height: 100%;
     width: 100%;
-}
+    object-fit: cover;
+    opacity: 0;
+    
+} 
 #video-cursor{
     background-color: #ffa63d;
-    height: 8.5vw;
-    width: 8.5vw;
+    height: 9vw;
+    width: 9vw;
     border-radius: 50%;
     position: absolute;
-    top: -10%;
-    left: 80%;
+    top: -15%;
+    left: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -248,7 +249,7 @@ body{
    margin-left: 28vw;
 }
 #image-div-container{
-    background-color: red;
+    /* background-color: red; */
     padding: 1vw;
    display: flex;
    align-items: flex-start;
@@ -257,13 +258,17 @@ body{
 }
 .image-div{
     margin: 2vw;
-    height: 39vw;
+    height: 38vw;
     width: 27vw;
     flex-shrink: 0;
      overflow: hidden;
     position: relative;
     /* background-color: blue; */
-} 
+}
+.image-div:nth-child(1){
+    height: 29vw;
+    width: 21vw;
+}
 .image-div img{
     height: 100%;
     width: 100%;
@@ -272,19 +277,81 @@ body{
 
 }
 .page3-circle1{
-   
-    height: 20vw;
-    width: 20vw;
+   position: relative;
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23vh;
+    margin-left: 5vw;    
+}
+.page3-circle1 svg{
+    height: 35%;
+    left: 50%;
+}
+
+.page3-circle2{
+   position: relative;
+    height: 23vw;
+    width: 23vw;
     border: 2px solid #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    /* margin-top: 23vh; */
+    /* margin-left: 5vw;     */
 }
-.page3-circle1 svg{
-    height: 30%;
-    left: 50%;
+.page3-circle2 svg{
+    height: 35%;
+    rotate: -45deg;
 }
+.circle-in{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0;
+     transition: all ease 0.5s;
+    border-radius: 50%;
+
+}
+.circle-in p{
+    font-size: 0.95vw;
+    color: #000;
+    font-weight: 500;
+    width: 60%;
+    scale: 0;
+    transition: all ease 0.5s;
+    transition-delay: 0.3s;
+    opacity: 0;
+}
+.page3-circle1:hover .circle-in{
+    scale: 1;
+    
+} 
+.page3-circle1:hover p{
+    scale: 1;
+    opacity: 1;
+}
+.page3-circle2:hover .circle-in{
+    scale: 1;
+    
+} 
+.page3-circle2:hover p{
+    scale: 1;
+    opacity: 1;
+}
+
 #page4{
     position: relative;
     min-height: 100vh;
