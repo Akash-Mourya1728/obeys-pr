@@ -164,3 +164,20 @@ function sheryAnimation(){
 locomotiveAnimation();
 cursorAnimation();
 sheryAnimation();
+
+document.addEventListener("mousemove", function(dets){
+    gsap.to("#flag",{
+      x:dets.x,
+      y:dets.y
+    })
+})
+document.querySelector("#hero3").addEventListener("mouseenter",function(){
+  gsap.to("#flag",{
+    opacity:1
+  })
+})
+document.querySelector("#hero3").addEventListener("mouseleave",function(){
+  gsap.to("#flag",{
+    opacity:0
+  })
+})

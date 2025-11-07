@@ -546,3 +546,15 @@ body{
     z-index: 999999 !important;
     pointer-events: none;
 }
+#flag{
+    height: 25vw;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+}
+#hero3{
+    z-index: 999;
+    position: relative;
+}
