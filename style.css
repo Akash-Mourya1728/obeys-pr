@@ -276,6 +276,7 @@ body{
     object-position: center;
 
 }
+
 .page3-circle1{
    position: relative;
     height: 23vw;
@@ -298,6 +299,7 @@ body{
    position: relative;
     height: 23vw;
     width: 23vw;
+    margin-top: -9vw;
     border: 2px solid #fff;
     border-radius: 50%;
     display: flex;
@@ -309,6 +311,22 @@ body{
 .page3-circle2 svg{
     height: 35%;
     rotate: -45deg;
+}
+.page3-circle3{
+     position: relative;
+    height: 23vw;
+    width: 23vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-left: 8vw;
+    margin-top: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page3-circle3 svg{
+    height: 35%;
+    rotate: -90deg;
 }
 .circle-in{
     height: 100%;
@@ -351,6 +369,15 @@ body{
     scale: 1;
     opacity: 1;
 }
+.page3-circle3:hover .circle-in{
+    scale: 1;
+    
+} 
+.page3-circle3:hover p{
+    scale: 1;
+    opacity: 1;
+}
+
 
 #page4{
     position: relative;
