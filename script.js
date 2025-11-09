@@ -99,7 +99,7 @@ function cursorAnimation(){
 Shery.mouseFollower({
   skew:true,
   ease:"cubic-bezier(0.23, 1, 0.320, 1)",
-  duration:1
+  duration:0
 });
 Shery.makeMagnet("#nav-part2 h4");
 
@@ -181,3 +181,41 @@ document.querySelector("#hero3").addEventListener("mouseleave",function(){
 })
 }
 flagAnimation();
+function footerAnimation(){
+   var clutter = ""
+  var clutter2 = ""
+  document.querySelector("#footer h1").textContent.split("").forEach(function (elem) {
+    clutter += `<span>${elem}</span>`
+  })
+  document.querySelector("#footer h1").innerHTML = clutter
+  document.querySelector("#footer h2").textContent.split("").forEach(function (elem) {
+    clutter2 += `<span>${elem}</span>`
+  })
+  document.querySelector("#footer h2").innerHTML = clutter2
+
+
+  document.querySelector("#footer-text").addEventListener("mouseenter", function () {
+    gsap.to("#footer h1 span", {
+      opacity: 0,
+      stagger: 0.05
+    })
+    gsap.to("#footer h2 span", {
+      delay: 0.35,
+      opacity: 1,
+      stagger: 0.1
+    })
+  })
+  document.querySelector("#footer-text").addEventListener("mouseleave", function () {
+    gsap.to("#footer h1 span", {
+      opacity: 1,
+      stagger: 0.1,
+      delay: 0.35,
+
+    })
+    gsap.to("#footer h2 span", {
+      opacity: 0,
+      stagger: 0.05
+    })
+  })
+}
+footerAnimation();
